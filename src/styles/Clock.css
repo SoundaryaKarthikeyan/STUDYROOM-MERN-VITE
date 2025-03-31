@@ -1,0 +1,79 @@
+/* Page layout */
+.clock-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Grid for all four sections */
+.clock-sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 15px; /* Reduced gap */
+    width: 85%;
+    max-width: 1000px; /* Slightly smaller width */
+    margin-top: 15px;
+}
+
+/* Style for each section */
+.clock-section {
+    background: rgb(234, 234, 255);
+    padding: 15px; /* Smaller padding */
+    border-radius: 10px; /* Slightly smaller radius */
+    text-align: center;
+    border: 1px solid #403e74;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input & button styling */
+.clock-section button,
+.clock-section input {
+    padding: 8px; /* Reduced padding */
+    font-size: 14px; /* Smaller font */
+    border-radius: 5px;
+    width: 75%;
+    margin: 6px 0;
+    border: 1px solid #403e74;
+}
+
+/* Lighter input background */
+.clock-section input {
+    background: white;
+    color: #000;
+}
+
+/* Button specific */
+.clock-section button {
+    background: #403e74;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 14px; /* Smaller text */
+}
+
+.clock-section button:hover {
+    background: #302e5a;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .clock-sections {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        width: 95%;
+    }
+
+    .clock-section {
+        padding: 10px;
+    }
+}
+
+/* Clock header */
+.clock-header {
+    text-align: center;
+    font-size: 1.5rem; /* Reduced size */
+    font-weight: bold;
+}

@@ -1,0 +1,64 @@
+/* Dashboard Styles */
+.dashboard-container {
+    min-height: 100vh;
+    width: 100%; /* Prevent horizontal overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    background-color: #f3f4f6; /* Light Gray */
+    padding: 20px;
+    overflow: hidden; /* Prevent scrolling issues */
+  }
+  
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Button Colors */
+  .bg-blue-500 { background-color: #3b82f6; }
+  .bg-green-500 { background-color: #22c55e; }
+  .bg-purple-500 { background-color: #a855f7; }
+  .bg-yellow-500 { background-color: #eab308; }
+  .bg-red-500 { background-color: #ef4444; }
+  .bg-indigo-500 { background-color: #6366f1; }
+  
+  /* Hover Effects */
+  .hover\:bg-blue-600:hover { background-color: #2563eb; }
+  .hover\:bg-green-600:hover { background-color: #16a34a; }
+  .hover\:bg-purple-600:hover { background-color: #9333ea; }
+  .hover\:bg-yellow-600:hover { background-color: #ca8a04; }
+  .hover\:bg-red-600:hover { background-color: #dc2626; }
+  .hover\:bg-indigo-600:hover { background-color: #4f46e5; }
+  
