@@ -10,10 +10,10 @@ import Settings from "./pages/Settings";
 import Clock from "./pages/Clock";
 import RoomDashboard from "./pages/Dashboard";
 import StreakPage from "./pages/StreakPage";
-import ChatScreen from "./components/ChatScreen";
+import Goal from "./pages/Goal";
 import { AuthProvider } from "./components/AuthContext"; // Import AuthProvider
 import { ChatProvider } from "./components/ChatContext"; // Import ChatProvider
-import "./App.css";
+import "./styles/App.css";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -43,8 +43,8 @@ const App = () => {
                 {!guest && <Route path="/schedule" element={<Schedule />} />}
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/clock" element={<Clock />} />
+                <Route path="/Goal" element={<Goal />} />
                 <Route path="/streakpage" element={<StreakPage />} />
-                <Route path="/chatpage" element={<ChatScreen />} />
                 <Route path="*" element={<Navigate to="/dashboard" />} />
               </Routes>
             </div>

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../Firebase/Firebase";
-import "./Sidebar.css"; // Ensure styles exist
-
+import "../styles/App.css"; // Ensure styles exist
+import "../styles/Sidebar.css"
 export default function Sidebar({ user, guest }) {
   const navigate = useNavigate();
 
@@ -25,8 +25,9 @@ export default function Sidebar({ user, guest }) {
         {!guest && <li><Link to="/schedule">🗓</Link></li>}
         <li><Link to="/clock"> ⏲</Link></li>
         <li><Link to="/streakpage">🐦‍🔥</Link></li>
+        <li><Link to="/Goal">🎯</Link></li>
         <li><Link to="/settings">⚙︎</Link></li>
-       
+        
       </ul>
       <button className="logout-btn" onClick={handleLogout}>
         {guest ? "Exit Guest Mode" : "Logout"}
