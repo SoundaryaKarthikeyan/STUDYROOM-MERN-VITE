@@ -1,0 +1,28 @@
+/* Main container to hold sidebar and content side-by-side */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar stays fixed width */
+.sidebar {
+  width: 80px;
+  background-color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Content takes up remaining space */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+  width:100vw;
+}
